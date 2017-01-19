@@ -20,6 +20,20 @@ if ($_GET['name'] == NULL):
 	<input type="submit" value="Send!">
 </form>
 
+<?php
+
+else: 
+
+$name = $_GET['name'];
+$half_name_length = (int) (mb_strlen($name) / 2);
+$remaining_chars = mb_strlen($name) - $half_name_length;
+$name_end = mb_substr($name, $half_name_length, $remaining_chars);
+$name_beginning = mb_substr($name, 0, $half_name_length);
+$botname = $name_end . $name_beginning;
+?>
+
+<h1><?= $botname ?></h1>
+
 <?php endif ?>
 
 </body>
