@@ -32,8 +32,12 @@ $name_beginning = mb_substr($name, 0, $half_name_length);
 $botname = $name_end . $name_beginning;
 ?>
 
-<h1><?= $botname ?></h1>
-
+<p><strong><?= $botname ?>:</strong> Hej <?= $name ?></p>
+<form>
+	<input type="text" name="reply">
+	<input type="hidden" name="name" value="<?= $name ?>">
+	<input type="submit" value="reply">
+</form>
 <?php endif ?>
 
 </body>
