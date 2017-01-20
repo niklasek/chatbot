@@ -47,6 +47,14 @@ else:
 ?>
 <p><strong><?= $botname ?>:</strong> Hej <?= $name ?></p>
 <p><strong><?= $name ?>:</strong> <?= $reply ?></p>
+
+<?php
+$array = ["Fint väder?", "Hur mår du"];
+$botreply = $array[random_int(0, count($array) - 1)];
+?>
+
+<p><strong><?= $botname ?>:</strong> <?= $botreply ?></p>
+
 <?php endif ?>
 
 </body>
